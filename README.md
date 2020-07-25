@@ -33,7 +33,10 @@ Simplicity of deployment is focus here. So, I've commited the frontend overheads
 - git clone https://github.com/amiteshbhartiya/itemmanager-laravelreact.git
 - composer install -to Run Laravel/Backend dependency
 - Copy .env.example into .env  [it's environment file of laravel] 
-- Last step is to manage Database configuration dependecy 
+- Last step is to manage Database configuration dependecy
+
+php artisan migrate
+php artisan db:seed
 
 ## Development highlight
 
@@ -48,7 +51,7 @@ Simplicity of deployment is focus here. So, I've commited the frontend overheads
 #### Out of the box 
 I used Docker for mysql & other dependencies
    
-   - **[download docker locally ](https://www.docker.com/products/docker-desktop)**
+   - **[download docker](https://www.docker.com/products/docker-desktop)**
    - docker-comoser configuration is already written in **[docker-composer.you](https://github.com/amiteshbhartiya/itemmanager-laravelreact/blob/master/docker-compose.yml)**
    - docker-compose up -d    (To run as background job)
    - mysql is ready to listen on 127.0.0.0:3607 out side of swarm but with in docker n/w host: mysql port: 3306  
