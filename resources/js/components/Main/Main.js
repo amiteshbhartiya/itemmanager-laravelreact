@@ -19,7 +19,7 @@ const MainC = () => {
         }
     }
 
-    function pickToCart(){ console.log('pickToCart'); console.log(includes(itemCart, selectedItemToBuy));
+    function pickToCart(){
         if(!isEmpty(selectedItemToBuy) &&  !includes(itemCart, selectedItemToBuy)){
             setItemCart(
                 prevSelectedItemToBuy => prevSelectedItemToBuy.concat(selectedItemToBuy)
@@ -42,7 +42,6 @@ const MainC = () => {
     function handleNewItem(event) { 
         
         const {name, value, type, checked} = event.target
-        console.log(name);
         if(name == 'AddtoInventry') {
             setNewItem(value);
 
@@ -54,15 +53,6 @@ const MainC = () => {
         }
     }
 
-
-    /*function addToPicked() {
-        if(!isEmpty(newItem) &&  !includes(itemInventory, newItem)){
-            setItemInventory(
-                prevsItemInventory => prevsItemInventory.concat(newItem)
-            )
-            setNewItem("");
-        }
-    }*/
     function createInventryToDB(name, status){
         Axios.post('/api/items', {
             name: name,
@@ -71,32 +61,27 @@ const MainC = () => {
         .then(response => {
             console.log('from handle submit', response);
         })
-       // .catch(err => console.log('[On Create]There was an error:' + err))
+       .catch(err => console.log('[On Create]There was an error:' + err))
     }
     
     function updateInventryToDB(name, status){ 
         let url = "/api/items/"+name;
-        //console.log('url--'+name)
         Axios.put(url, {
             is_picked:status
         })
         .then(response => {
             console.log('from handle submit', response);
         })
-       // .catch(err => console.log('[On Update]There was an error:' + err))
+       .catch(err => console.log('[On Update]There was an error:' + err))
     }
 
     useEffect(() => {
         fetch('http://localhost:8001/api/items')
         .then((res)=> res.json())
         .then(
-            (results) => { //console.log( map(results.data, 'name'));
-                //setIsLoaded(true);
-                //console.log(!isEmpty(results.data));
-
+            (results) => { 
                 if(results.hasOwnProperty('data') && !isEmpty(results.data) ){
                     let available =[], notAvailable=[]
-                    //let data = map(results.data, 'name')
                     forEach(results.data, function(value) {
                         if(value.hasOwnProperty('name') && value.hasOwnProperty('is_picked')){
                             if(value.is_picked){
@@ -112,8 +97,7 @@ const MainC = () => {
                 }
             },
             (error) => {
-                //setIsLoaded(true);
-                //setError(error);
+
             }
         );
     

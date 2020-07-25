@@ -43,6 +43,10 @@
         main{
              margin-top: 66px;
         }
+
+        select option{
+            font-size: 0.9rem;
+        }
         /*main{
          
             background-image: url(../images/abstract-on-blue.jpg);
