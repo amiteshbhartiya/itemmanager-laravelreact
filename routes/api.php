@@ -26,9 +26,12 @@ Route::get('products/{product}', 'ProductsController@show');
  
 Route::post('products','ProductsController@store');
  
-Route::put('products/{product}','ProductsController@update');
+
  
 Route::delete('products/{product}', 'ProductsController@delete');
 */
 
-Route::get('/items', 'ItemController@getAllItem');
+Route::get('/items', 'ItemController@index');
+
+Route::put('items/{id}','ItemController@update');
+Route::post('items','ItemController@store');

@@ -21,8 +21,8 @@
         body { 
         margin: 0;
         font-family: "Open Sans", sans-serif;
-        background-color:#343a40;
-        color:#fff;
+        background-color:#344038;
+        color:#f8f9fa;
         
         }
        .btn-group-vertical > button{
@@ -39,6 +39,9 @@
             height: 60px;
             line-height: 60px;
             background-color: #f5f5f5;
+        }
+        main{
+             margin-top: 66px;
         }
         /*main{
          
