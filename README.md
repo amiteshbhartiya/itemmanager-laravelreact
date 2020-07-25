@@ -18,6 +18,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Tech Stacks
 
+- PHP     : >= "^7.2.5", 
 - Laravel : PHP Framework(V7)
 - React   : Laravel React scaffolding
 - Docker  : Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. 
@@ -27,10 +28,33 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## To setup
 
+Simplicity of deployment is focus here. So, I've commited the frontend overheads to reduce deployment steps. Follow below steps to your system.
+ 
 - git clone https://github.com/amiteshbhartiya/itemmanager-laravelreact.git
-- npm install -to Run React/Frontend dependency
 - composer install -to Run Laravel/Backend dependency
-- Copy .env.example into .env  [it's environment file of laravel]
+- Copy .env.example into .env  [it's environment file of laravel] 
+- Last step is to manage Database configuration dependecy
+
+php artisan migrate
+php artisan db:seed
+
+## Development highlight
+
+- Controller Repository Model Pattern
+- Form Request
+- Docker
+- React scaffolding
+- React Functional Components & Hooks (I think it's better than class component - more lightweight & Readable)
+
+ Now application is ready to serve
+
+#### Out of the box 
+I used Docker for mysql & other dependencies
+   
+   - **[download docker](https://www.docker.com/products/docker-desktop)**
+   - docker-comoser configuration is already written in **[docker-composer.you](https://github.com/amiteshbhartiya/itemmanager-laravelreact/blob/master/docker-compose.yml)**
+   - docker-compose up -d    (To run as background job)
+   - mysql is ready to listen on 127.0.0.0:3607 out side of swarm but with in docker n/w host: mysql port: 3306  
 
 ## Development highlight
 
