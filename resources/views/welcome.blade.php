@@ -23,6 +23,7 @@
         font-family: "Open Sans", sans-serif;
         background-color:#344038;
         color:#f8f9fa;
+        background-image: url(../images/abstract-on-blue.jpg);
         
         }
        .btn-group-vertical > button{
@@ -36,8 +37,7 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 60px;
-            line-height: 60px;
+            line-height: 30px;
             background-color: #f5f5f5;
         }
         main{

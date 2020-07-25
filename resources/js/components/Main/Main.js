@@ -9,13 +9,13 @@ const MainC = () => {
     const [selectedItemToBuy, setSelectedItemToBuy] = useState("");
     const [itemToReturn, setItemToReturn] = useState("");
  
-    function addMe(){
+    function addToInventry(){
         if(!isEmpty(newItem) &&  !includes(itemInventory, newItem) && !includes(itemCart, newItem) ){
             setItemInventory(
                 prevsItemInventory => prevsItemInventory.concat(newItem)
-            )
+            )                    
+            createInventryToDB(newItem, false);
             setNewItem("");
-            createInventryToDB(itemToReturn, false);
         }
     }
 
@@ -127,7 +127,7 @@ const MainC = () => {
 
                     <input name="AddtoInventry" type="text" onChange={handleNewItem} value={newItem} className="form-control mb-2 mr-sm-2 w-25" id="inlineFormInputName2" placeholder="Enter Item Name and Click Add"/>
 
-                    <button type="button" className="btn btn-primary mb-2" onClick={addMe}> Submit</button>
+                    <button type="button" className="btn btn-primary mb-2" onClick={addToInventry}> Submit</button>
                     </div> 
                     <div className="row">
                     <div className="col-5" style={{'marginTop': '30px'}}>
