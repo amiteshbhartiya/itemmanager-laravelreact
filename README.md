@@ -1,7 +1,7 @@
 
 ## About Item Manager
 
-Item Manager is a single page web application with Laravel & React project. 
+Item Manager is a single page web application buit in Laravel & React. 
 
 ## Specifications
 - The web page has a single text box which allows the user to enter some textual input (called the item name). Once the user enters some text and clicks on 'Add' the item will be added to the list below that text box and the input will be cleared.  
