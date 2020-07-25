@@ -7,6 +7,8 @@ use App\Model\ItemInventory;
 use App\Http\Resources\ItemCollection;
 use Illuminate\Database\QueryException;
 use App\Repositories\Repository;
+use App\Http\Requests\ItemStoreRequest;
+use App\Http\Requests\ItemUpdateRequest;
 
 class ItemController extends Controller
 {
@@ -48,13 +50,16 @@ class ItemController extends Controller
      * 
      * @return json
      */
-    public function store(Request $request)
+    public function store(ItemStoreRequest $request)
     {
 
         try {
+            //Call to Forrm validation
+            $validated = $request->validated();            
+            //Post validation proceed to save data
             $itemInventory = $this->model->getModel();
-            $itemInventory->name = $request->name;
-            $itemInventory->is_picked = (bool)$request->is_picked;
+            $itemInventory->name = $validated['name'];
+            $itemInventory->is_picked = (bool)$validated['is_picked'];
             $itemInventory->save();
             
             return response()->json($itemInventory, 200);
@@ -70,10 +75,13 @@ class ItemController extends Controller
     /**
      *  To Uodate 'is_picked' flag
      */
-    public function update(Request $request, $id)
+    public function update(ItemUpdateRequest $request, $id)
     {  
-        //commond exceptions are handled the global Handle.php
+        $validated = $request->validated();  
+
        $itemInventory = $this->model->show(urldecode($id));
+
+       //commond exceptions are handled the global Handle.php
        $itemInventory->is_picked = (bool)$request->is_picked;
        $itemInventory->save();
 
