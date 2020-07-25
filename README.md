@@ -18,6 +18,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Tech Stacks
 
+- PHP     : >= "^7.2.5", 
 - Laravel : PHP Framework(V7)
 - React   : Laravel React scaffolding
 - Docker  : Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. 
