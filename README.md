@@ -32,6 +32,13 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 - composer install -to Run Laravel/Backend dependency
 - Copy .env.example into .env  [it's environment file of laravel]
 
+## Development highlight
+
+- Controller Repository Model Pattern
+- Form Request
+- Docker
+- React scaffolding
+- React Functional Components & Hooks (I think it's better than class component - more lightweight & Readable)
 
 ## Next Steps
 That’s all there is to it. There’s definitely room for improvement—you can implement OAuth2 with the Passport package, integrate a pagination and transformation layer (I recommend Fractal), the list goes on—but I wanted to go through the basics of creating and testing an API in Laravel with no external packages.
