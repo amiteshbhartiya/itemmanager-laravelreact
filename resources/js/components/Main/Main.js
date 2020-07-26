@@ -116,7 +116,7 @@ const MainC = () => {
                     <div className="row">
                     <div className="col-5" style={{'marginTop': '30px'}}>
                         <div className="form-group">
-                            <select name="itemInventory" onChange={handleNewItem} size= {itemInventory.length>5? (itemInventory.length<15?itemInventory.length:15) : 5} className="custom-select custom-select-lg mb-3" id="exampleFormControlSelect1">
+                            <select name="itemInventory" onChange={handleNewItem} size= {itemInventory.length>7? (itemInventory.length<15?itemInventory.length:15) : 7} className="custom-select custom-select-lg mb-3" id="exampleFormControlSelect1">
                             {itemInventory.map(item => (
                                     <option key ={item} id={item}>{item}</option>
                                 ))}
@@ -125,12 +125,8 @@ const MainC = () => {
                     </div>
                     <div className="col-1 align-self-center" style={{'textAlign': 'center'}}>
                         <div className="btn-group-vertical">
-                
-                            <button  type="button" className="btn btn-primary" onClick={pickToCart} >{'>>'}</button>
-                    
-
+                             <button  type="button" className="btn btn-primary" onClick={pickToCart} >{'>>'}</button>
                             <button type="button" className="btn btn-primary" onClick={removeFromCart} >{'<<'}</button>
-        
                         </div>
                         
                     </div>

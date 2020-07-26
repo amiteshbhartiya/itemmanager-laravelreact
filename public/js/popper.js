@@ -127,8 +127,8 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/amitesh/Documents/Programs/item-manager/node_modules/popper.js/dist/popper.js */"./node_modules/popper.js/dist/popper.js");
-module.exports = __webpack_require__(/*! /Users/amitesh/Documents/Programs/item-manager/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/amitesh/Documents/Programs/testing/item-manager/node_modules/popper.js/dist/popper.js */"./node_modules/popper.js/dist/popper.js");
+module.exports = __webpack_require__(/*! /Users/amitesh/Documents/Programs/testing/item-manager/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

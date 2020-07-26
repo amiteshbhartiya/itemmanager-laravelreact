@@ -47,21 +47,7 @@
         select option{
             font-size: 0.9rem;
         }
-        /*main{
-         
-            background-image: url(../images/abstract-on-blue.jpg);
-             height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-             width: 100%;
-            position: absolute;
-            bottom: 80px;
-            top: 80px;
-            left: 0;
-            right: 0;
-        }
-        */
+        
         </style>
     </head>
     <body>
