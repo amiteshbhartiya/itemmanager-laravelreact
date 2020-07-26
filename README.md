@@ -34,19 +34,11 @@ Simplicity of deployment is focus here. So, I've commited the frontend overheads
 - composer install -to Run Laravel/Backend dependency
 - Copy .env.example into .env  [it's environment file of laravel] 
 - Last step is to manage Database configuration dependecy
+  - php artisan migrate
+  - php artisan db:seed
 
-php artisan migrate
-php artisan db:seed
 
-## Development highlight
-
-- Controller Repository Model Pattern
-- Form Request
-- Docker
-- React scaffolding
-- React Functional Components & Hooks (I think it's better than class component - more lightweight & Readable)
-
- Now application is ready to serve
+##### Now application is ready to serve
 
 #### Out of the box 
 I used Docker for mysql & other dependencies
